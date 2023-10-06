@@ -4,8 +4,10 @@ class Makeup():
         self._brand = brand
         self._type = type
 
-        # TODO: add people who bought makeup item
-        # TODO: add purchases of makeup item
+        # TODO: add people who bought makeup item ✅
+        # TODO: add purchases of makeup item ✅
+        self.owners = []
+        self.purchases = []
 
     @property
     def brand(self):
@@ -13,7 +15,7 @@ class Makeup():
     
     @brand.setter
     def brand(self, brand):
-        if not hasattr(self, "brand"):
+        if not hasattr(self, "brand"): # checks that attribute has not already been set
             self._brand = brand
         else:
             raise Exception("Brand can be set only once!")
@@ -29,5 +31,5 @@ class Makeup():
         else:
             raise Exception("Type must be a string!")
         
-    def __str__(self):
+    def __repr__(self):
         return f"Brand: {self.brand}\nMakeup Type: {self.type}"

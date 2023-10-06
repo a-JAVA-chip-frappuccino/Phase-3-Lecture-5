@@ -4,8 +4,10 @@ class People():
         self._name = name
         self._age = age
 
-        # TODO: add makeup items purchased by person
-        # TODO: add purchases by person
+        # TODO: add makeup items purchased by person ✅
+        # TODO: add purchases by person ✅
+        self.makeup_items = []
+        self.purchases = []
         
     @property
     def name(self):
@@ -29,5 +31,5 @@ class People():
         else:
             raise Exception("Age must be an integer greater than 12!")
         
-    def __str__(self):
+    def __repr__(self):
         return f"Name: {self.name}\nAge: {self.age}"
